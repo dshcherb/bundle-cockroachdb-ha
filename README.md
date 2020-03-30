@@ -10,7 +10,9 @@ First, install Juju 2.7.5+ if not already done (at the time of writing, 2.7.5 is
 sudo snap install --channel 2.7/candidate
 ```
 
-Second, update all submodules recursively to get charm sources.
+If you do not have a controller already, bootstrap a controller via the LXD provider by following this doc: https://juju.is/docs/lxd-cloud.
+
+Update all submodules recursively to get charm sources.
 
 ```
 git submodule update --init --recursive
@@ -46,7 +48,7 @@ cd cockroach-v19.2.2.linux-amd64
 Use `cockroach sql` to access the database via the SQL interface.
 
 ```
-cockroach sql --insecure --url postgres://<virtual-ip>
+./cockroach sql --insecure --url postgres://<virtual-ip>
 ```
 
 # Limitations
