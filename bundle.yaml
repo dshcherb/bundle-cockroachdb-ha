@@ -1,0 +1,18 @@
+applications:
+    cockroachdb:
+        charm: ./cockroachdb-operator
+        options:
+            default-zone-replicas: 3
+            system-data-replicas: 3
+        num_units: 3
+    haproxy:
+        charm: ./haproxy-operator
+        options:
+            # uncomment and replace this with your own pre-allocated virtual IP.
+            # virtual-ip: 192.0.2.100
+        num_units: 3
+    keepalived-vrrp:
+        charm: ./keepalived-vrrp-operator
+relations:
+    - [ cockroachdb, haproxy ]
+    - [ haproxy, keepalived-vrrp ]

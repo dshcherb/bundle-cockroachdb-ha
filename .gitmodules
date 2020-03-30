@@ -1,0 +1,9 @@
+[submodule "cockroachdb-operator"]
+	path = cockroachdb-operator
+	url = https://github.com/dshcherb/cockroachdb-operator
+[submodule "haproxy-operator"]
+	path = haproxy-operator
+	url = https://github.com/dshcherb/haproxy-operator
+[submodule "keepalived-vrrp-operator"]
+	path = keepalived-vrrp-operator
+	url = https://github.com/dshcherb/keepalived-vrrp-operator
