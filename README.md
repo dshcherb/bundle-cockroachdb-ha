@@ -4,7 +4,13 @@ This bundle provides an example of how to deploy a CockroachDB cluster via charm
 
 # Usage
 
-First, update all submodules recursively to get charm sources.
+First, install Juju 2.7.5+ if not already done (at the time of writing, 2.7.5 is in the `2.7/candidate` channel).
+
+```
+sudo snap install --channel 2.7/candidate
+```
+
+Second, update all submodules recursively to get charm sources.
 
 ```
 git submodule update --init --recursive
